@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    	<!-- Boostrap icons CSS -->
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    	<title>Project 3 - Keith Lienert - Contact</title>
+    	<link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    	<script src="javascript/includeHTML.js"></script>
+    </head>
+    <body>
+        <div class="container bg-white">
+            <header class="mb-0" my-include-html="include/header.html"></header>
+            <nav class="mb-0" my-include-html="include/navigation.html"></nav>
+            <main class="p-3">
+                <h2 class="text-center text-dark">Contact Keith</h2>
+                <p class="text-danger">* - required fields</p>
+                    <form action="https://www.w3schools.com/action_page.php"
+                            id="multipleForm"
+                            method="get"
+                            class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <div class="mb-3">
+                                <label for="fname">First Name<span class="text-danger"> *</span></label>
+                                <input type="text" class="form-control" id="fname"
+                                name="first" maxlength="40"
+                                pattern="^[A-Za-z]{1,40}$" required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">First name is required up to 30 characters</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="mb-3">
+                                <label for="lname">Last Name<span class="text-danger"> *</span></label>
+                                <input type="text" class="form-control"
+                                name="last" id="lname" maxlength="60"
+                                pattern="^[A-Za-z]{1,60}$" required/>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Last name is required up to 40 characters</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="mb-3">
+                                <label for="email">Email address<span class="text-danger"> *</span></label>
+                                <input type="text" class="form-control"
+                                name="email" id="email" maxlength="60"
+                                pattern="\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}" required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Email is required (i.e., abc@xyz.com) up to 60 characters</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+        					<label for="exampleSelect3">Select your 'favorite' percussion instrument(s)</label>
+        					<select multiple size="3" class="form-control" id="exampleSelect3" name="exampleSelect3[]">
+        						<option value="Snare">Snare Drum</option>
+        						<option value="Mallets">Mallet Percussion</option>
+        						<option value="Timpani">Timpani</option>
+        						<option value="Drumset">Drumset</option>
+        						<option value="Marching Percussion">Marching Percussion</option>
+        					</select>
+        				</div>
+
+                       <!-- Preferred communcation radio button -->
+                        <fieldset class="form-group border my-3 px-4 py-2 bg-light">
+                            <legend class="w-auto font-bold text-muted h5">Preferred way of communication</legend>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" id="phone"
+                                        name="communication" value="phone" required>
+                                        Phone
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" id="text"
+                                        name="communication" value="text">
+                                        Text Message
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" id="FBMessage"
+                                        name="communication" value="FBMessage">
+                                        FB Messenger
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" id="USPost"
+                                        name="communication" value="USPost">
+                                        Snail Mail
+                                    </label>
+                                </div>
+                        </fieldset>
+
+                       <!-- Percussion Instruments checkbox -->
+                        <fieldset class="form-group border my-3 px-4 py-2 bg-light">
+                            <legend class="w-auto font-bold text-muted h5">Select which percussion instrument(s) you would like to study</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="SD"
+                                    value="snare" id="SD">
+                                    <label class="form-check-label" for="SD">Snare</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="mallets"
+                                    value="mallets" id="mallets">
+                                    <label class="form-check-label" for="mallets">Mallet Percussion</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="timps"
+                                    value="timpani" id="timps">
+                                    <label class="form-check-label" for="timps">Timpani</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="drumset"
+                                    value="drumset" id="drumset">
+                                    <label class="form-check-label" for="drumset">Drumset</label>
+                                </div>
+                        </fieldset>
+
+                        <!-- Comments -->
+                        <fieldset class="form-group border my-3 px-4 py-2 bg-light">
+        					<legend class="w-auto font-bold text-muted h5">Please leave any comments.</legend>
+        					<div class="mb-3 p-3">
+        						<label for="textInput" class="form-label">Comments</label>
+        						<input type="text" id="textInput" class="form-control">
+        					</div>
+        				</fieldset>
+                        <button type="submit" class="m-3 btn btn-primary" data-target="multipleForm">Submit</button>
+                        <button class="m-3 btn btn-primary" type="reset">Clear</button>
+                    </form>
+            </main>
+            <footer my-include-html="include/footer.html"></footer>
+        </div>
+        <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        -->
+        <script>includeHTML();</script>
+        <script src="javascript/formValidation.js"></script>
+    </body>
+</html>

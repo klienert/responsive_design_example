@@ -1,0 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+	font-family: "Muli", Helvetica, Arial, sans-serif;
+	background-color: #586994;
+}
+header, footer {background-color: #E2E2E2;}
